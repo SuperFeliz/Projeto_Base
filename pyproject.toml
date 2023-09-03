@@ -1,10 +1,10 @@
 [tool.poetry]
-name = "big-mechanic"
+name = "Projeto_base"
 version = "0.1.0"
 description = ""
 authors = ["SuperFeliz <linuxeopoder@gmail.com>"]
 readme = "README.md"
-packages = [{include = "big_mechanic"}]
+packages = [{include = "Projeto_base"}]
 
 [tool.poetry.dependencies]
 python = "^3.11"
