@@ -28,7 +28,17 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    # Needed for django-allauth 0.55
+    'django.contrib.sites',
+    
+    # Third party app
+    'allauth',
+    'allauth.account',
+    'allauth.socialaccount',
 ]
+
+# django-allauth 0.55
+SITE_ID = 1
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -71,6 +81,15 @@ DATABASES = {
     }
 }
 
+
+AUTHENTICATION_BACKENDS = [
+    
+    # Necessário fazer login por nome de usuário no Django admin, independentemente de `allauth`
+    'django.contrib.auth.backends.ModelBackend',
+
+    # Métodos de autenticação específicos `allauth`, como login por e-mail
+    'allauth.account.auth_backends.AuthenticationBackend',
+]
 
 # Password validation
 # https://docs.djangoproject.com/en/4.2/ref/settings/#auth-password-validators
