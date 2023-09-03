@@ -10,6 +10,7 @@ packages = [{include = "big_mechanic"}]
 python = "^3.11"
 django = "^4.2.4"
 python-decouple = "^3.8"
+django-allauth = "^0.55.2"
 
 
 [tool.poetry.group.dev.dependencies]
